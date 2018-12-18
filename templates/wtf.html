@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block base %}
+<form method="POST" action="/">
+{{ form.csrf_token }}
+{{ form.name.label(id='ll',class='label label-info') }} {{ form.name(size=20,class='input-lg') }}</br>
+{{ form.pwd.label(id='l2',class='label label-info') }} {{ form.pwd(size=20,class='input-lg') }}
+<input type="submit" value="Go">
+</form>
+
+{% endblock %}

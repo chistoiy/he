@@ -1,0 +1,25 @@
+
+
+<div>
+<input id='kk' type='text' placeholder='like this!!!' value='nihaoaaa'>
+
+
+</div>
+<script src='jquery-3.3.1.min.js'></script>
+<script >
+	$a='';
+	function show(){
+   alert("ready");
+};
+ 
+ 
+ $('#kk').on('input propertychange', function() {
+	if($a){
+	clearTimeout($a);}
+	$a = setTimeout(show,5000);
+	
+ 
+ });
+
+
+</script>

@@ -1,0 +1,48 @@
+
+<style>
+form div{
+	float:left;
+	width:49.5%;
+	height:90%;
+	border:1px solid green;
+}
+.desp{
+width:100%;
+height:100%;
+
+}
+</style>
+<form method="POST" action="/">
+{{ form.csrf_token }}
+ 
+{{form.hidden_tag()}}  
+    
+     {{form.description(class='desp')}}
+  
+   <!--<div class="flask-pagedown-preview" llll id="flask-pagedown-description-preview"></br>-->
+  {{ form.submit()}}
+  
+ 
+</form>
+<script type="text/javascript">
+f = function() {
+    if (typeof flask_pagedown_converter === "undefined")
+        flask_pagedown_converter = Markdown.getSanitizingConverter().makeHtml;
+    var textarea = document.getElementById("flask-pagedown-description");
+    var preview = document.getElementById("flask-pagedown-description-preview");
+    textarea.onkeyup = function() { preview.innerHTML = flask_pagedown_converter(textarea.value); }
+    textarea.onkeyup.call(textarea);
+}
+if (document.readyState === 'complete')
+    f();
+else if (window.addEventListener)
+    window.addEventListener("load", f, false);
+else if (window.attachEvent)
+    window.attachEvent("onload", f);
+else
+    f();
+</script>
+<script type="text/javascript" src="static/js/Markdown.Converter.min.js"></script>
+<script type="text/javascript" src="static/js/Markdown.Sanitizer.min.js"></script>
+<object type="application/x-shockwave-flash" style="outline:none;" data="https://cdn.abowman.com/widgets/dog/dog.swf?3?" width="300" height="225"><param name="movie" value="https://cdn.abowman.com/widgets/dog/dog.swf?3?"><param name="AllowScriptAccess" value="always"><param name="wmode" value="opaque"><param name="bgcolor" value="FFFFFF"></object>
+

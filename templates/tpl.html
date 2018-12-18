@@ -1,0 +1,17 @@
+{% extends 'layout.html'%}
+{% block content %}
+	{{users.0}}
+	{{users[0]}}
+	{{a}}
+	{{b(2)}}
+	{{1|c(2,3)}}
+
+	{% macro ccc(name,type='text',value='') %}
+			<h1>宏</h1>
+			<input type='text'>
+	
+	{% endmacro %}
+	
+	{{ ccc(1) }}
+	{{ ccc(1) }}
+{% endblock %}
